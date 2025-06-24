@@ -13,7 +13,7 @@ from utils import Utils
 from control_point import ControlPoint
 
 """
-    エリア再生のシミュレーション
+    エリア再生のシミュレータ
     2025.06.24 Itsuki Hashimoto
 """
 

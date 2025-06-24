@@ -7,6 +7,12 @@ from control_point import ControlPoint
 from simulator import Simulator
 
 
+"""
+    エリア再生のシミュレーションを行う
+    2025.06.25 Itsuki Hashimoto
+"""
+
+
 def get_speaker_positions() -> list[tuple[float, float, float]]:
     """
     スピーカの座標を返す
@@ -47,8 +53,11 @@ def get_control_points() -> list[ControlPoint]:
     return positions
 
 
-def main():
-
+def main() -> None:
+    """
+    エントリポイント
+    :return: なし
+    """
     rate, signal = Utils.load_wav_file("1kHz_0db.wav")
 
     sm = Simulator(

@@ -9,6 +9,13 @@ from scipy import fft
 from control_point import ControlPoint
 
 
+"""
+    シミュレータとは関係ない関数類
+        フィルタの作成とかファイル入出力とか
+    2025.06.24 Itsuki Hashimoto
+"""
+
+
 class Utils:
     @staticmethod
     def pad(src: np.array, length: int) -> np.array:
@@ -41,7 +48,7 @@ class Utils:
         """
         wavファイルを読み込む(-1.0~1.0)
         :param filename: ファイル名
-        :return: 読み込んだ波形
+        :return: サンプリング周波数と読み込んだ波形
         """
         assert os.path.isfile(filename)
 
@@ -54,6 +61,13 @@ class Utils:
 
     @staticmethod
     def save_wav_file(filename: str, fs: int, data: np.array) -> None:
+        """
+        wavファイルを作成し書き込む
+        :param filename: ファイル名
+        :param fs: サンプリング周波数[Hz]
+        :param data: 書き込む波形データ
+        :return: なし
+        """
         wavfile.write(filename, fs, data)
 
     @staticmethod
