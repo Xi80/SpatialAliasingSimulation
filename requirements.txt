@@ -1,0 +1,8 @@
+numpy
+matplotlib
+matplotlib-fontja
+scipy
+pyroomacoustics
+flake8
+soundfile
+tqdm
